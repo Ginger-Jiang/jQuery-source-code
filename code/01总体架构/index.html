@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      /**
+       * 立即执行函数 - IIFE
+       * 1、隔离作用域: ES6 之前不存在块级作用域, 只能使用函数作用域进行模拟
+       * 2、立即执行特性: 函数被执行引擎以同步的方式立即执行了
+       * 3、"一次性函数": 由于不存在函数名, 函数在执行后无法再次执行
+       * 4、保护自己的代码: 防止在多人协作时, 被其他同名变量覆盖
+       * */
+      // 写法1
+      (function() {
+        console.log('我是写法1的自执行函数')
+      })();
+      //写法2
+      (function() {
+        console.log('我是写法2的自执行函数')
+      }());
+      //写法3
+      !function(){
+        console.log('我是写法3的自执行函数')
+      }()
+
+      (function(){})()
+      
+      var undefined  = 'ginger'
+      console.log('undefined',undefined);
+      /**
+       * 
+       * 
+       * */
+    </script>
+  </body>
+</html>
