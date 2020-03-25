@@ -10,36 +10,6 @@
 - jQuery(jQuery object): 接受一个 jQuery 对象, 返回该 jQuery 对象的拷贝副本
 - jQuery(): 创建一个 jQuery 对象
 
-```js
-(function(window, undefined){
-  // 构造 jQuery 对象
-  var jQuery = (function() {
-    var jQuery = function(selector, context) {
-      return new jQuery.fn.init(selector, context, rootjQury)
-    }
-
-    // ...  声明 N 多局部变量
-
-    jQuery.fn = jQuery.protopyte = {
-      constructor: jQuery,
-      init: function(selector, context, rootjQuery) { ... }
-      // 声明 N 多原型属性与方法
-    }
-
-    jQuery.fn.init.prototype = jQuery.fn
-    jQuery.extend = jQuery.fn.extend = function() { ... }
-    jQuery.extend({
-      // ... 一堆静态属性与方法
-    })
-    return jQuery
-  })()
-
-  // ... 省略其他模块
-
-  window.$ = window.jQuery = jQuery
-})(window)
-```
-
 ## jQuery(select [,context])
 
 如果传入一个字符串参数, jQuery 会检查这个字符串是选择器表达式还是 HTML 代码. 如果是选择器表达式, 则遍历文档, 查找与之匹配的 DOM 元素, 并创建一个包含了这些 DOM 元素引用的 jQuery 对象. 如果没有元素与之匹配, 则创建一个空 jQuery 对象, 其中不包含任何元素, 其属性 length 等于 0.
