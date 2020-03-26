@@ -45,12 +45,12 @@ $('<button>CLICK ME</button>').appendTo('body');
 
 ownerDocument 用于指定创建新 DOM 元素的文档对象, 如果不传入, 则默认为当前文档对象
 
-如果 HTML 代码是一个单独标签, 那么第二个参数还可以是 props, props 是一个包含了属性、事件的普通对象; 在调用 document.createElement() 创建 DOM 元素后, 参数 props 会被传给 jQuery 方法 `.attr()`, 然后由 `.attr()` 负责把 props 中的属性、事件设置到新穿创建的 DOM 元素上
+如果 HTML 代码是一个单独标签, 那么第二个参数还可以是 props, props 是一个包含了属性、事件的普通对象; 在调用 document.createElement() 创建 DOM 元素后, 参数 props 会被传给 jQuery 方法 `.attr()`, 然后由 `.attr()` 负责把 props 中的属性、事件设置到新创建的 DOM 元素上
 
 参数 props 的属性可以是任意的事件类型（如"click"），此时属性值应该是事件监听函数，它将被绑定到新创建的 DOM 元素上；参数 props 可以含有以下特殊属性：val、css、html、text、data、width、height、offset，相应的 jQuery 方法：`.val()`、`.css()`、`.html()`、`.text()`、`.data()`、`.width()`、`.height()`、`.offset()将被执行，并且属性值会作为参数传入；其他类型的属性则会被设置到新创建的 DOM 元素上，某些特殊属性还会做跨浏览器兼容（如 type、value、tabindex 等）；可以通过属性名 class 设置类样式，但要用引号把 class 包裹起来，因为 class 是 JavaScript 保留字。
 
 ```js
-$('<div />', {
+$('<div>', {
   text: '哈哈',
   class: 'active',
   click: function() {

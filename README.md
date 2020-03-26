@@ -19,7 +19,8 @@
 
 - 构造 jQuery 对象
 
-  jQuery 对象是一个类数组对象，含有连续的整型属性、length 属性和大量的 jQuery 方法。jQuery 对象由构造函数 jQuery()创建，\$()则是 jQuery()的缩写。
+  jQuery 对象是一个类数组对象，含有连续的整型属性、length 属性和大量的 jQuery 方法。jQuery 对象由构造函数 jQuery()创建，`$()`则是 jQuery()的缩写。
 
   - 构造函数 jQuery()
-  - jQuery构造函数的总体结构
+  - jQuery 构造函数的总体结构
+  - 构造函数 jQuery.fn.init()
