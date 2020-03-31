@@ -24,3 +24,4 @@
   - 构造函数 jQuery()
   - jQuery 构造函数的总体结构
   - 构造函数 jQuery.fn.init()
+  - jQuery.buildFragment() 方法
